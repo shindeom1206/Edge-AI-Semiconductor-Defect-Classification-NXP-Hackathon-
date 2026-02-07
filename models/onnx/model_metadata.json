@@ -1,0 +1,51 @@
+{
+    "model_name": "Semiconductor Defect Classification",
+    "framework": "PyTorch \u2192 ONNX",
+    "architecture": "MobileNetV2 (Transfer Learning)",
+    "input_shape": [
+        1,
+        3,
+        224,
+        224
+    ],
+    "output_classes": 8,
+    "class_names": [
+        "LER",
+        "bridge",
+        "clean",
+        "crack",
+        "open",
+        "other",
+        "particle",
+        "scratch"
+    ],
+    "image_size": [
+        224,
+        224
+    ],
+    "normalization": {
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ]
+    },
+    "onnx_opset": 13,
+    "file_size_mb": 0.2961235046386719,
+    "accuracy_pytorch": 92.87,
+    "accuracy_onnx": 92.87,
+    "inference_time_ms": 4.479188919067383,
+    "target_platform": "NXP i.MX RT (eIQ)",
+    "preprocessing": "Grayscale \u2192 RGB conversion, Resize to 224x224, Normalize",
+    "test_accuracy": 92.87,
+    "test_samples": 841,
+    "macro_precision": 93.49,
+    "macro_recall": 92.84,
+    "macro_f1_score": 92.87,
+    "note": "Final test accuracy from Phase 9 comprehensive evaluation"
+}
