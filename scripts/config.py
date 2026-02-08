@@ -19,8 +19,8 @@ LOGS_DIR = os.path.join(PROJECT_ROOT, "logs")
 # DATA CONFIGURATION
 # ============================================================================
 IMAGE_SIZE = (224, 224)
-NUM_CLASSES = 8  # ✅ Correct for your 8 classes
-CLASS_NAMES = ['LER', 'bridge', 'clean', 'crack', 'open', 'other', 'particle', 'scratch']  # ✅ Perfect!
+NUM_CLASSES = 8  # ✅classes
+CLASS_NAMES = ['LER', 'bridge', 'clean', 'crack', 'open', 'other', 'particle', 'scratch']  # ✅
 
 # Data split ratios
 TRAIN_RATIO = 0.7
