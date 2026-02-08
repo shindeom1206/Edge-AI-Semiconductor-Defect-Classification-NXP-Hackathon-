@@ -14,7 +14,7 @@ from tqdm import tqdm
 
 # ==================== CONFIGURATION ====================
 MODEL_PATH = r"C:\hackathon_project\models\best_model.pth"
-TRAIN_DATA_PATH = r"C:\edge-ai-defect-classification\dataset_128\train"
+TRAIN_DATA_PATH = r"C:\edge-ai-defect-classification\dataset_224_rgb\train"
 TEST_DATA_PATH = r"C:\edge-ai-defect-classification\dataset_224_rgb\test"  # ✅ YOUR CORRECT PATH
 RESULTS_DIR = r"C:\hackathon_project\results"
 QUANTIZED_DIR = r"C:\hackathon_project\models\quantized"
@@ -397,4 +397,5 @@ print(f"\n✅ Quantized models ready for Phase 8 (ONNX Export)")
 print(f"✅ Model size target achieved: {min(dynamic_size, static_size):.2f} MB ≤ 8 MB")
 print(f"✅ Recommended model: {recommended_model.upper()}")
 print(f"\n🚀 Next Step: Export to ONNX format (Deliverable #2)")
+
 print(f"📁 All files in: {QUANTIZED_DIR}")
