@@ -1,5 +1,5 @@
 """
-Phase 6: Model Evaluation - FIXED for RGB input
+Phase 6: Model Evaluation -
 """
 
 import torch
@@ -58,10 +58,9 @@ print("\n" + "="*80)
 print("📊 LOADING TEST DATASET")
 print("="*80)
 
-# FIXED: Convert grayscale to RGB (3 channels) to match training
 test_transform = transforms.Compose([
     transforms.Grayscale(num_output_channels=1),  # Load as grayscale
-    transforms.Lambda(lambda x: x.convert('RGB')),  # Convert to RGB (duplicate channels)
+    transforms.Lambda(lambda x: x.convert('RGB')),  
     transforms.Resize(IMAGE_SIZE),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # ImageNet normalization
@@ -300,4 +299,5 @@ with open(metrics_json, 'w') as f:
 
 print(f"✅ Detailed metrics (JSON) saved: {metrics_json}")
 print("\n🎬 Phase 6 Complete! Review results and proceed accordingly.")
+
 print("\n" + "="*80)
