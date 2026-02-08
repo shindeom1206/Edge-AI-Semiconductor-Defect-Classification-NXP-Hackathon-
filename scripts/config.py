@@ -4,14 +4,9 @@ Configuration File - Optimized for Anti-Overfitting
 
 import os
 
-# ============================================================================
-# PATHS
-# ============================================================================
-# Add these lines at the top of your config.py (after imports)
 DATASET_ROOT = "C:/edge-ai-defect-classification/dataset_128"
 PROJECT_ROOT = "C:/hackathon_project"
 
-# CRITICAL: Add these three lines
 DATA_DIR = DATASET_ROOT
 TRAIN_DIR = os.path.join(DATASET_ROOT, "train")
 VAL_DIR = os.path.join(DATASET_ROOT, "val")
