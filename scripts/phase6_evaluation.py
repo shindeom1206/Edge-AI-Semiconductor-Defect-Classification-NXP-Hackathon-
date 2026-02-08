@@ -16,7 +16,7 @@ import sys
 
 # ==================== CONFIGURATION ====================
 MODEL_PATH = r"C:\hackathon_project\models\best_model.pth"
-TEST_DATA_PATH = r"C:\edge-ai-defect-classification\dataset_128\test"
+TEST_DATA_PATH = r"C:\edge-ai-defect-classification\dataset_224_rgb\test"
 RESULTS_DIR = r"C:\hackathon_project\results"
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -301,3 +301,4 @@ print(f"✅ Detailed metrics (JSON) saved: {metrics_json}")
 print("\n🎬 Phase 6 Complete! Review results and proceed accordingly.")
 
 print("\n" + "="*80)
+
