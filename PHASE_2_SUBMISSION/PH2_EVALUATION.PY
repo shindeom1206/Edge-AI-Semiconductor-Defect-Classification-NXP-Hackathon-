@@ -40,7 +40,6 @@ from tqdm import tqdm
 
 # ============================================================================
 # CONFIGURATION  — all values hardcoded from model_metadata.json
-# (no runtime file reading — edge AI deployment style)
 # ============================================================================
 
 class Config:
@@ -495,4 +494,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
