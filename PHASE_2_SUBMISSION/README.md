@@ -4,11 +4,11 @@ This script runs the official Phase-2 evaluation using the same MobileNetV2 ONNX
 
 ✔ Rules followed
 
-No retraining,
-no re-export
-Resize-only preprocessing (224×224)
-No TTA or image enhancement
-ONNX Runtime CPU (NXP eIQ compatible)
+1. No retraining,
+2. no re-export
+3. Resize-only preprocessing (224×224)
+4. No TTA or image enhancement
+5. ONNX Runtime CPU (NXP eIQ compatible)
 
 🧠 Pipeline
 
@@ -21,7 +21,7 @@ VIA → other (no training class)
 
 📊 Outputs
 
-Predictions CSV
-Classification report
-Confusion matrix
-Metrics JSON
+1. Predictions CSV
+2. Classification report
+3. Confusion matrix
+4. Metrics JSON
