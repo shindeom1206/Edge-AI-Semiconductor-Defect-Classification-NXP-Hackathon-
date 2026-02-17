@@ -215,13 +215,6 @@ def build_class_mapping():
 
 # ============================================================================
 # ONNX INFERENCE
-#
-# Key points (Parth's checklist):
-#   Step 1: Class order hardcoded — NOT from os.listdir()
-#   Step 2: Input shape (1,3,224,224) — PIL ToTensor gives CHW automatically
-#   Step 3: Normalization applied via torchvision transforms (same as training)
-#   Step 4: Plain argmax on logits — no thresholding
-#   Step 5: 5-image debug printed before full inference
 # ============================================================================
 
 def load_onnx_session(model_path):
@@ -496,3 +489,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
