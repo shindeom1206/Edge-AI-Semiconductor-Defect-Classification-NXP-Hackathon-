@@ -11,13 +11,16 @@ No TTA or image enhancement
 ONNX Runtime CPU (NXP eIQ compatible)
 
 🧠 Pipeline
+
 Grayscale → RGB → Resize 224×224 → Normalize → ONNX inference → Metrics
 
 🔁 Class Mapping
+
 CMP → scratch (organiser confirmed)
 VIA → other (no training class)
 
 📊 Outputs
+
 Predictions CSV
 Classification report
 Confusion matrix
