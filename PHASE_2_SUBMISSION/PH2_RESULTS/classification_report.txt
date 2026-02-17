@@ -1,0 +1,21 @@
+Phase 2 Final Classification Report
+Model: MobileNetV2 ONNX (Phase 1 submitted model)
+Preprocessing: Grayscale->RGB->Resize 224x224->Normalize (per training)
+Rules: Resize only, no TTA (per organizer email Feb 16 2026)
+CMP->scratch (organizer confirmed), VIA->other
+================================================================================
+
+              precision    recall  f1-score   support
+
+         LER     0.4889    0.7333    0.5867        30
+      bridge     0.2951    0.5625    0.3871        32
+       clean     0.1905    0.2424    0.2133        33
+       crack     0.5600    0.4516    0.5000        31
+        open     0.3214    0.3000    0.3103        30
+       other     0.4255    0.2500    0.3150        80
+    particle     0.4286    0.4000    0.4138        30
+     scratch     0.4000    0.2667    0.3200        30
+
+    accuracy                         0.3750       296
+   macro avg     0.3887    0.4008    0.3808       296
+weighted avg     0.3929    0.3750    0.3684       296

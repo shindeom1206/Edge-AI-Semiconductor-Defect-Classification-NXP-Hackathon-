@@ -1,0 +1,96 @@
+2026-02-17 17:36:17,101 - INFO - 
+================================================================================
+2026-02-17 17:36:17,101 - INFO - PHASE 2 - FINAL SUBMISSION (ONNX)
+2026-02-17 17:36:17,101 - INFO - Model: defect_classification_model.onnx (Phase 1 submitted)
+2026-02-17 17:36:17,101 - INFO - Preprocessing: Grayscale->RGB->Resize 224x224->Normalize (PIL)
+2026-02-17 17:36:17,101 - INFO - Rules: Resize only, no TTA (per organizer email Feb 16 2026)
+2026-02-17 17:36:17,101 - INFO - ================================================================================
+2026-02-17 17:36:17,101 - INFO - 
+[1/5] Loading ONNX model...
+2026-02-17 17:36:17,101 - INFO - Loading ONNX model: C:\hackathon_project\models\onnx\defect_classification_model.onnx
+2026-02-17 17:36:17,101 - INFO - Found external data file: defect_classification_model.onnx.data
+2026-02-17 17:36:17,218 - INFO - ONNX input  name=input, shape=['batch_size', 3, 224, 224], dtype=tensor(float)
+2026-02-17 17:36:17,220 - INFO - ONNX output name=output, shape=['batch_size', 8], dtype=tensor(float)
+2026-02-17 17:36:17,220 - INFO - [SUCCESS] ONNX model loaded
+2026-02-17 17:36:17,220 - INFO - 
+[2/5] Building class mapping...
+2026-02-17 17:36:17,220 - INFO -   Bridge     -> bridge     (matched, class 1)
+2026-02-17 17:36:17,220 - INFO -   CMP        -> scratch    (override, class 7)
+2026-02-17 17:36:17,220 - INFO -   Clean      -> clean      (matched, class 2)
+2026-02-17 17:36:17,220 - INFO -   Crack      -> crack      (matched, class 3)
+2026-02-17 17:36:17,220 - INFO -   LER        -> LER        (matched, class 0)
+2026-02-17 17:36:17,220 - INFO -   Open       -> open       (matched, class 4)
+2026-02-17 17:36:17,222 - INFO -   Other      -> other      (matched, class 5)
+2026-02-17 17:36:17,222 - INFO -   Particle   -> particle   (matched, class 6)
+2026-02-17 17:36:17,222 - INFO -   VIA        -> other      (override, class 5)
+2026-02-17 17:36:17,222 - INFO - 
+[3/5] Loading dataset...
+2026-02-17 17:36:17,224 - INFO -   Loaded  32 images from: Bridge
+2026-02-17 17:36:17,224 - INFO -   Loaded  30 images from: CMP
+2026-02-17 17:36:17,224 - INFO -   Loaded  33 images from: Clean
+2026-02-17 17:36:17,226 - INFO -   Loaded  31 images from: Crack
+2026-02-17 17:36:17,226 - INFO -   Loaded  30 images from: LER
+2026-02-17 17:36:17,226 - INFO -   Loaded  30 images from: Open
+2026-02-17 17:36:17,226 - INFO -   Loaded  50 images from: Other
+2026-02-17 17:36:17,226 - INFO -   Loaded  30 images from: Particle
+2026-02-17 17:36:17,226 - INFO -   Loaded  30 images from: VIA
+2026-02-17 17:36:17,226 - INFO - [SUCCESS] Dataset loaded: 296 images
+2026-02-17 17:36:17,228 - INFO - 
+[4/5] Running debug check on 5 images...
+2026-02-17 17:36:17,228 - INFO - 
+[DEBUG] First 5 images:
+2026-02-17 17:36:17,289 - INFO -   img[0] shape=(1, 3, 224, 224)  dtype=float32  min=-1.964  max=2.640
+2026-02-17 17:36:17,329 - INFO -          True=Bridge      Pred=open        Confidence=0.707
+2026-02-17 17:36:17,349 - INFO -   img[1] shape=(1, 3, 224, 224)  dtype=float32  min=-2.118  max=2.570
+2026-02-17 17:36:17,358 - INFO -          True=Bridge      Pred=bridge      Confidence=1.000
+2026-02-17 17:36:17,362 - INFO -   img[2] shape=(1, 3, 224, 224)  dtype=float32  min=-2.118  max=2.640
+2026-02-17 17:36:17,370 - INFO -          True=Bridge      Pred=bridge      Confidence=0.961
+2026-02-17 17:36:17,374 - INFO -   img[3] shape=(1, 3, 224, 224)  dtype=float32  min=-2.118  max=2.640
+2026-02-17 17:36:17,382 - INFO -          True=Bridge      Pred=LER         Confidence=0.699
+2026-02-17 17:36:17,386 - INFO -   img[4] shape=(1, 3, 224, 224)  dtype=float32  min=-2.118  max=2.640
+2026-02-17 17:36:17,392 - INFO -          True=Bridge      Pred=bridge      Confidence=0.778
+2026-02-17 17:36:17,392 - INFO - 
+[5/5] Running full ONNX inference...
+2026-02-17 17:36:17,392 - INFO - 
+================================================================================
+2026-02-17 17:36:17,392 - INFO - RUNNING ONNX INFERENCE
+2026-02-17 17:36:17,392 - INFO - ================================================================================
+2026-02-17 17:36:19,849 - INFO - [SUCCESS] ONNX inference complete: 296 predictions
+2026-02-17 17:36:19,872 - INFO - 
+================================================================================
+2026-02-17 17:36:19,872 - INFO - FINAL RESULTS
+2026-02-17 17:36:19,872 - INFO - ================================================================================
+2026-02-17 17:36:19,872 - INFO - Overall Accuracy:      37.50%
+2026-02-17 17:36:19,872 - INFO - Macro  - P: 38.87%  R: 40.08%  F1: 38.08%
+2026-02-17 17:36:19,872 - INFO - Weighted- P: 39.29%  R: 37.50%  F1: 36.84%
+2026-02-17 17:36:19,872 - INFO - ================================================================================
+2026-02-17 17:36:19,882 - INFO - 
+Classification Report:
+              precision    recall  f1-score   support
+
+         LER     0.4889    0.7333    0.5867        30
+      bridge     0.2951    0.5625    0.3871        32
+       clean     0.1905    0.2424    0.2133        33
+       crack     0.5600    0.4516    0.5000        31
+        open     0.3214    0.3000    0.3103        30
+       other     0.4255    0.2500    0.3150        80
+    particle     0.4286    0.4000    0.4138        30
+     scratch     0.4000    0.2667    0.3200        30
+
+    accuracy                         0.3750       296
+   macro avg     0.3887    0.4008    0.3808       296
+weighted avg     0.3929    0.3750    0.3684       296
+
+2026-02-17 17:36:21,090 - INFO - 
+[OK] predictions_detailed.csv
+2026-02-17 17:36:21,090 - INFO - [OK] classification_report.txt
+2026-02-17 17:36:21,090 - INFO - [OK] confusion_matrix.png
+2026-02-17 17:36:21,090 - INFO - [OK] metrics_summary.json
+2026-02-17 17:36:21,090 - INFO - [OK] prediction_log.txt
+2026-02-17 17:36:21,090 - INFO - 
+[SUCCESS] All results saved to: C:\hackathon_project\PH2_FINAL_ONNX1
+2026-02-17 17:36:21,090 - INFO - ================================================================================
+2026-02-17 17:36:21,090 - INFO - PHASE 2 COMPLETE
+2026-02-17 17:36:21,090 - INFO -    Accuracy : 37.50%
+2026-02-17 17:36:21,090 - INFO -    F1 Macro : 38.08%
+2026-02-17 17:36:21,090 - INFO - ================================================================================
