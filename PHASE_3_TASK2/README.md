@@ -33,23 +33,4 @@
   Saved: C:\hackathon_project\PH3\results\predictions_20260226_030506.txt
   Lines: 331
 
-  PREVIEW (first 10 lines):
-  -------------------------------------------------------
-  Image Name                          Predicted Class
-  -------------------------------------------------------
-  100.png                             CLEAN_CRACK
-  101.png                             CRACK
-  102.png                             BRIDGE
-  103.png                             OPEN
-  104.png                             OTHERS
-  105.png                             PARTICLE
-  106.png                             CMP
-  107.png                             CLEAN_CRACK
-  108.png                             BRIDGE
-  109.png                             CRACK
-  ... and 321 more lines
-
-================================================================================
-  DONE  --  Upload this file to the hackathon portal:
-  C:\hackathon_project\PH3\results\predictions_20260226_030506.txt
 ================================================================================
