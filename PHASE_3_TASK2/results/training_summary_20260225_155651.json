@@ -1,0 +1,32 @@
+{
+    "training_time_minutes": 4.719890860716502,
+    "best_val_f1": 0.5250849210207499,
+    "best_val_loss": 1.6967233419418335,
+    "final_overfit_gap": -0.01667376448970259,
+    "test_accuracy": 0.4945652173913043,
+    "test_precision_macro": 0.5163010934401308,
+    "test_recall_macro": 0.5162348517611676,
+    "test_f1_macro": 0.49112599861507705,
+    "total_epochs": 102,
+    "model": {
+        "backbone": "mobilenet_v2",
+        "num_classes": 11,
+        "class_names": [
+            "BRIDGE",
+            "CLEAN_CRACK",
+            "CLEAN_LAYER",
+            "CLEAN_VIA",
+            "CMP",
+            "CRACK",
+            "LER",
+            "OPEN",
+            "OTHERS",
+            "PARTICLE",
+            "VIA"
+        ],
+        "image_size": [
+            128,
+            128
+        ]
+    }
+}
